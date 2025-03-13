@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
    
-    <title>DEmo</title>
+    <title>Demo</title>
 </head>
 <body>
-    
-
-
     <h1>
         <?php 
-        echo "Hello, World";
+        //String concatination is done with a period "."
+        echo "Hello, " . "Wang";
         ?>
     </h1>
 </body>
