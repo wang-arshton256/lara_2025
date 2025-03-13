@@ -11,7 +11,7 @@
         $greeting = "Hello";
         //String concatination is done with a period "."
 
-        //Dynamically enter a greeting after diclaring a variable
+        //Dynamically pass a greeting after diclaring a variable
         echo $greeting . " " ."Wang";
         ?>
     </h1>
