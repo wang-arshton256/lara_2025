@@ -8,8 +8,11 @@
 <body>
     <h1>
         <?php 
+        $greeting = "Hello";
         //String concatination is done with a period "."
-        echo "Hello, " . "Wang";
+
+        //Dynamically enter a greeting after diclaring a variable
+        echo $greeting . " " ."Wang";
         ?>
     </h1>
 </body>
