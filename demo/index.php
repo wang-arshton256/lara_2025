@@ -12,7 +12,9 @@
         //String concatination is done with a period "."
 
         //Dynamically pass a greeting after diclaring a variable
-        echo $greeting . " " ."Wang";
+        
+        //echo $greeting . " " ."Wang";
+        echo "$greeting wang";
         ?>
     </h1>
 </body>
