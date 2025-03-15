@@ -8,7 +8,7 @@
     <h1>Recommended Books</h1>
 
     <?php
-    $Books = [
+    $books= [
         ['name' => 'Do Androids Dream of Electri Sheep',
         'author' => 'Phillip K. Dick',
     'purchaseUrl' => 'http://amazon.com',
@@ -27,21 +27,36 @@
     'releaseYear' => 1998
  ],
     ];
-    
+
+    function filterByAuthor($books, $author){
+         $filteredBooks = [];
+         foreach ($books as $book){
+            if($book['author'] === $author){
+                $filteredBooks[] = $book;
+            }
+         }
+         return $filteredBooks;
+    }
+     
     ?>
+
+    
 
     <ul>
     
     <!--When ever there is need to build complex html fragmets, this syntax below is the best to use-->
-    <?php foreach ($Books as $book):?>
-        <?php if($book['author'] === 'Phillip K. Dick'):?>
+
+    <?php foreach (filterByAuthor ($books, 'Phillip K. Dick') as $book):?>
+       
         <li>
             <a href="<?=$book['purchaseUrl']?>">
         <?=$book['name']?> (<?=$book['releaseYear']?>) (<?=$book['author']?>)
         </a>
     </li>
-    <?php endif?>
+   
     <?php endforeach;?>
     </ul>
+
+    
 </body>
 </html>
