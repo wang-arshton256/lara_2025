@@ -36,7 +36,7 @@
     <?php foreach ($CarBrand as $carbrand):?>
         
             <li>
-                <strong><?=$carbrand['Brand'];?>  </strong>   :       <strong>Model:</strong>     <?=$carbrand['Model'];?>      <strong> Manufacturing year:  </strong>         <?=$carbrand['Manufacturing_year'];?>     <strong>   Price:  </strong>        <?=$carbrand['Price'];?>
+                <strong><?=$carbrand['Brand'];?>  </strong>   :       <strong>Model:</strong>     (<?=$carbrand['Model'];?>)      <strong> Manufacturing year:  </strong>         (<?=$carbrand['Manufacturing_year'];?>)     <strong>   Price:  </strong>        (<?=$carbrand['Price'];?>)
             </li>
         
         <?php endforeach;?>
