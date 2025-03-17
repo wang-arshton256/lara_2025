@@ -39,7 +39,6 @@
     }
      
     ?>
-
     
 
     <ul>
@@ -57,6 +56,7 @@
     <?php endforeach;?>
     </ul>
 
+    
     
 </body>
 </html>
