@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Demo</title>
-</head>
-<body>
-    <h1>Recommended Books</h1>
-
-    <?php
+<?php
     $books= [
         ['name' => 'Do Androids Dream of Electri Sheep',
         'author' => 'Phillip K. Dick',
@@ -28,18 +19,35 @@
  ],
     ];
 
-    $filtererBooks = array_filter($books, function ($book){
-        return $book['author'] === 'Andy Weir';
-    })
+    function filterByAuthor($books, $author){
+         $filteredBooks = [];
+         foreach ($books as $book){
+            if($book['author'] === $author){
+                $filteredBooks[] = $book;
+            }
+         }
+         return $filteredBooks;
+    }
      
     ?>
+    
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+    <h1>Recommended Books</h1>
+
     
 
     <ul>
     
     <!--When ever there is need to build complex html fragmets, this syntax below is the best to use-->
 
-    <?php foreach ($filtererBooks as $book):?>
+    <?php foreach (filterByAuthor ($books, 'Phillip K. Dick') as $book):?>
        
         <li>
             <a href="<?=$book['purchaseUrl']?>">
